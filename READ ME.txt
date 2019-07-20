@@ -1,0 +1,31 @@
+How to Install:
+
+1. Download and install Node.js. Make sure to install NPM as well if prompted.
+
+2. Download and install MongoDB. 
+
+3. Set-up MongoDB environment 
+- (Read section Run MongoDB Community Edition from link here: https://docs.mongodb.com/v3.2/tutorial/install-mongodb-on-windows/)
+- For other OS, there should be links to the same guide for Linux and OS X from the link above.
+- Make sure the directory of the MongoDB bin folder is included in the PATH environmental variable so that the programs in the MongoDB bin folder can be accessed anywhere in the command-line prompt.
+
+4. Open a terminal/command-line prompt and navigate to the root directory of this project repository.
+
+5. Create a folder named 'dist' if it does not exist in the root directory of this project repository. 
+
+6. Run 'npm install' to install all modules and dependencies.
+
+7. Run 'npx webpack' to build the front-end web client. (This will be stored in the 'dist' folder created in step #5.)
+
+
+
+
+How to Run:
+
+1. Open a terminal/command-line prompt and run 'mongod' to start the MongoDB service. Do not close this terminal.
+
+2. Open a second terminal/command-line prompt and navigate to the root directory of this project repository.
+
+3. In this second terminal/command-line prompt, run 'node server/app.js' to start the web server. Do not close this terminal. 
+
+4. In a web browser, in the address bar, enter in the URL "localhost:3000" to get to the Amazon Product Fetch tool page. 

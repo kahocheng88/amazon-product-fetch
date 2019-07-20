@@ -1,0 +1,72 @@
+#searchSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#formWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+#searchInput {
+  border: 1px solid #c2c2c2;
+  border-radius: 3px;
+  box-shadow: 1px 1px 4px #ebebeb;
+  box-sizing: border-box;
+  padding: 7px;
+  outline: 0;
+  width: 400px;
+}
+
+#searchButton {
+  color: white;
+  background-color: #ff8500;  
+  border: 0;
+  padding: 8px 15px 8px 15px;
+  box-shadow: 1px 1px 4px #dadada;
+  border-radius: 3px;
+  margin-left: 10px;
+}
+
+#searchButton:hover {
+  background-color: #ea7b00;
+  cursor: pointer;
+}
+
+#searchButton:disabled, #searchButton:disabled:hover {
+  background-color: grey;
+  cursor: default;
+}
+
+#errorMessage {
+  height: 20px;
+  padding: 10px 20px;
+  font-family: Arial;
+  font-size: 12px;
+  color: red;
+}
+
+table#productInfo {
+  border-radius: 5px;
+  font-family: Arial;
+  font-size: 12px;
+}
+
+table#productInfo, table#productInfo td {
+  border: 1px solid #cccccc;
+  border-collapse: collapse;
+}
+
+table#productInfo td {
+  padding: 10px 20px;
+}
+
+td.fieldLabel {
+  background-color: #F5F5F5;
+  color: #666;
+}
+
+td.fieldValue {
+  width: 400px;
+}
