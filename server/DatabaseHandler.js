@@ -5,24 +5,6 @@ const databaseName = 'AmazonProducts';
 let clientHandler = null;
 let db = null;
 
-const executeAction = async action => {
-    return new Promise(resolve => {
-        MongoClient.connect(url, { useNewUrlParser: true }, (err, client) => {
-            if (err !== null) {
-                console.log(err);
-            }
-            else {
-                console.log('Connected to database @ ', url);
-                clientHandler = client;
-                db = clientHandler.db(databaseName);
-                const result = action();
-                clientHandler.close();
-                resolve(result);
-            }
-        });
-    });
-};
-
 const connect = async () => {
     return new Promise (resolve => {
         MongoClient.connect(url, { useNewUrlParser: true }, (err, client) => {
@@ -46,7 +28,6 @@ const updateItem = async (collectionName, filter, item) => {
                 resolve(false);
                 return;
             }
-            // console.log(result);
             resolve(true);
         });
     });
@@ -63,7 +44,6 @@ const findItems = async (collectionName, filter) => {
 
 exports.update = async (collectionName, filter, newItem) => {
     return new Promise (resolve => {
-        console.log("update");
         MongoClient.connect(url, { useNewUrlParser: true }, async (err, client) => {
             if (err !== null) {
                 console.log(err);
@@ -88,7 +68,6 @@ exports.update = async (collectionName, filter, newItem) => {
 
 exports.find = async (collectionName, filter) => {
     return new Promise (resolve => {
-        console.log("find");
         MongoClient.connect(url, { useNewUrlParser: true }, async (err, client) => {
             if (err !== null) {
                 console.log(err);

@@ -25,30 +25,8 @@ const getFromWeb = async asin => {
     return {};
 };
 
-// const getFromWeb = asin => {
-//     const url = 'https://www.amazon.com/dp/' + asin;
-    
-//     return axios.get(url)
-//     .then(async response => {
-//         const parsedData = ProductParser.parse(response.data);
-
-//         if (parsedData.name !== '') {
-//             parsedData.asin = asin;
-//             const result = await DatabaseHandler.update('products', {'asin': asin}, parsedData);
-            
-//             if (result) {
-//                 console.log('success');
-//                 return parsedData;
-//             }
-//         }
-//         return {};
-//     })
-//     .catch(error => {
-//         console.log(error);
-//         return "Unable to retrieve Product Info.";
-//     });
-// };
-
+exports.fetchFromStorage = getFromStorage;
+exports.fetchFromWeb = getFromWeb;
 exports.fetch = async asin => {
     let productData = await getFromStorage(asin);
     
@@ -57,8 +35,3 @@ exports.fetch = async asin => {
     }
     return productData;
 };
-
-exports.fetchFromStorage = getFromStorage;
-exports.fetchFromWeb = getFromWeb;
-
-

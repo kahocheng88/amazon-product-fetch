@@ -7,24 +7,6 @@ const Product = require('./Product');
 
 let router = express.Router();
 
-// const fetchProduct = asin => {
-//   const url = 'https://www.amazon.com/dp/' + asin;
-
-//   return axios.get(url)
-//   .then(response => {
-//     console.log(response.data);   
-
-//     return response.data;
-//   })
-//   .catch(error => {
-//     console.log(error);
-//     return error;
-//   });
-
-  
-//   // res.json({'asin': asin});
-// };
-
 router.get('/product/:asin', async function(req, res) {
   const asin = req.params.asin;
   if (typeof asin === 'undefined') {
@@ -38,7 +20,6 @@ router.get('/product/:asin', async function(req, res) {
 });
 
 app.use('/api', router);
-
 app.use('/', express.static('./dist', {
   index: "index.html"
 }));
