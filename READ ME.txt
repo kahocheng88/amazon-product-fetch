@@ -29,3 +29,11 @@ How to Run:
 3. In this second terminal/command-line prompt, run 'node server/app.js' to start the web server. Do not close this terminal. 
 
 4. In a web browser, in the address bar, enter in the URL "localhost:3000" to get to the Amazon Product Fetch tool page. 
+
+
+
+How to Run Tests:
+
+1.  Open a terminal/command-line prompt and navigate to the root directory of this project repository.
+
+2. In the terminal, enter and run 'npm test' to execute testing of the test cases. 
